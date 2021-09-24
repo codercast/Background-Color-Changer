@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>Background Color Changer</title>
+    <link href="styles.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    </head>
+
+    <body>
+        <script>
+            function changeColor() {
+                var x = document.querySelector("body");
+                var randomColor = Math.floor(Math.random()*16777215).toString(16);
+                var z = document.getElementById("randColor");
+            x.style.backgroundColor = randomColor;
+            z.textContent = randomColor;
+
+            }            
+        </script>
+    
+    <div class="button">
+        <button id="btn" onclick="changeColor()">Click Me!</button>
+        <p>#<span id="randColor">000000</span></p>
+    </div>
+    </body>
+</html>
